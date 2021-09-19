@@ -9,6 +9,7 @@ import * as docker from 'images/skills/docker.svg';
 import * as git from 'images/skills/git.svg';
 import * as jest from 'images/skills/jest.svg';
 import * as sql from 'images/skills/sqlsvg.svg';
+import * as angular from 'images/skills/angular.svg';
 
 export interface ISkill {
 	name: string;
@@ -25,30 +26,29 @@ export interface ISkillList {
 const skills: ISkillList = [
 	{
 		name: 'Javascript',
-		years: 3,
+		years: 4,
 		img: javascript,
 		url: 'https://www.javascript.com/',
 	},
 	{
 		name: 'Typescript',
-		years: 2,
+		years: 3,
 		img: typescript,
 		url: 'https://www.typescriptlang.org/',
 	},
-	{ name: 'React', years: 3, img: react, url: 'https://pt-br.reactjs.org/' },
-	{ name: 'Node.Js', years: 3, img: nodejs, url: 'https://nodejs.org/en/' },
-	{ name: 'Java', years: 3, img: java, url: 'https://www.java.com/' },
+	{ name: 'React', years: 4, img: react, url: 'https://pt-br.reactjs.org/' },
+	{ name: 'Angular', years: 4, img: angular, url: 'https://angular.io/' },
+	{ name: 'Node.Js', years: 4, img: nodejs, url: 'https://nodejs.org/en/' },
+	{ name: 'Java', years: 4, img: java, url: 'https://www.java.com/' },
 	{
 		name: 'Spring Framework',
-		years: 3,
+		years: 4,
 		img: spring,
 		url: 'https://spring.io/',
 	},
 	{ name: 'AWS', years: 1, img: aws, url: 'https://aws.amazon.com/' },
 	{ name: 'Docker', years: 1, img: docker, url: 'https://www.docker.com/' },
-	{ name: 'Git', years: 3, img: git, url: 'https://git-scm.com/' },
-	{ name: 'Jest', years: 1, img: jest, url: 'https://jestjs.io/' },
-	{ name: 'SQL Databases', years: 3, img: sql, url: 'https://www.mysql.com/' },
+	{ name: 'SQL Databases', years: 4, img: sql, url: 'https://www.mysql.com/' },
 ];
 
 export default skills;

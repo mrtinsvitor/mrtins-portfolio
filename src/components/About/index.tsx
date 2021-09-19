@@ -48,7 +48,7 @@ const About: React.FC = () => {
 								placement="bottom"
 								overlay={
 									<Tooltip id="tooltip-bottom">
-										{el.name} -
+										{el.name} -{' '}
 										{el.years > 1 ? `${el.years} years` : `${el.years} year`}
 									</Tooltip>
 								}
