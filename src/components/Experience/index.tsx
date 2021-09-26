@@ -8,52 +8,59 @@ import Divider from '../shared/Divider';
 import CenterComponent from '../shared/CenterComponent';
 
 import {
-  StyledCompanyName,
-  StyledCompanyInfo,
-  StyledExperienceDescription,
-  StyledExperienceSkills,
-  StyledVerticalDivider,
+	StyledCompanyName,
+	StyledCompanyInfo,
+	StyledExperienceDescription,
+	StyledExperienceSkills,
+	StyledVerticalDivider,
 } from './styles';
 
-import experienceList from '../../data/experiences';
-import { IExperience } from '../../data/experiences/types';
+import experienceList, { IExperience } from 'data/experiences';
 
 const Experience: React.FC = () => {
-  return (
-    <Container style={{ marginTop: '120px' }}>
-      <CenterComponent>
-        <div style={{ marginBottom: '40px' }}>
-          <Title>Career Experience</Title>
-          <Divider width={25} />
-        </div>
-        <Container>
-          {experienceList.map((experience: IExperience, i: number) => (
-            <div key={i} style={{ marginBottom: '20px' }}>
-              <Row>
-                <Col md={3}>
-                  <StyledCompanyName>{experience.companyName}</StyledCompanyName>
-                  <StyledCompanyInfo>{experience.period}</StyledCompanyInfo>
-                  <StyledCompanyInfo>{experience.place}</StyledCompanyInfo>
-                </Col>
-                <Col md={1}>
-                  <StyledVerticalDivider />
-                </Col>
-                <Col md={8}>
-                  <StyledExperienceDescription>
-                    {experience.description}
-                  </StyledExperienceDescription>
-                  <StyledExperienceDescription style={{ margin: 0, padding: 0 }}>
-                    Some of the technologies that I use at {experience.companyName}:
-                  </StyledExperienceDescription>
-                  <StyledExperienceSkills>{experience.skills}</StyledExperienceSkills>
-                </Col>
-              </Row>
-            </div>
-          ))}
-        </Container>
-      </CenterComponent>
-    </Container>
-  );
+	function renderExperienceList() {
+		return experienceList
+			.sort((a: IExperience, b: IExperience) => b.id - a.id)
+			.map((experience: IExperience, i: number) => (
+				<div key={i} style={{ marginBottom: '20px' }}>
+					<Row>
+						<Col md={3}>
+							<StyledCompanyName>{experience.companyName}</StyledCompanyName>
+							<StyledCompanyInfo>{experience.period}</StyledCompanyInfo>
+							<StyledCompanyInfo>{experience.place}</StyledCompanyInfo>
+						</Col>
+						<Col md={1}>
+							<StyledVerticalDivider />
+						</Col>
+						<Col md={8}>
+							<StyledExperienceDescription>
+								{experience.description}
+							</StyledExperienceDescription>
+							<StyledExperienceDescription style={{ margin: 0, padding: 0 }}>
+								Some of the technologies that I{' '}
+								{experience.period.includes('Present') ? 'use' : 'used'} at{' '}
+								{experience.companyName}:
+							</StyledExperienceDescription>
+							<StyledExperienceSkills>
+								{experience.skills}
+							</StyledExperienceSkills>
+						</Col>
+					</Row>
+				</div>
+			));
+	}
+
+	return (
+		<Container style={{ marginTop: '120px' }}>
+			<CenterComponent>
+				<div style={{ marginBottom: '40px' }}>
+					<Title>Career Experience</Title>
+					<Divider width={25} />
+				</div>
+				<Container>{renderExperienceList()}</Container>
+			</CenterComponent>
+		</Container>
+	);
 };
 
 export default Experience;
