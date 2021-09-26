@@ -6,8 +6,6 @@ import * as java from 'images/skills/java.svg';
 import * as spring from 'images/skills/spring.svg';
 import * as aws from 'images/skills/aws.svg';
 import * as docker from 'images/skills/docker.svg';
-import * as git from 'images/skills/git.svg';
-import * as jest from 'images/skills/jest.svg';
 import * as sql from 'images/skills/sqlsvg.svg';
 import * as angular from 'images/skills/angular.svg';
 

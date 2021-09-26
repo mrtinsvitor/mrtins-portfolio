@@ -10,15 +10,9 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import CenterComponent from '../shared/CenterComponent';
 import Divider from '../shared/Divider';
 import Text from '../shared/Text';
-import Button from '../shared/Button';
 import CircleIcon from '../shared/CircleIcon';
 
-import {
-	StyledGatsbyImage,
-	StyledTitle,
-	ButtonContainer,
-	IconsContainer,
-} from './styles';
+import { StyledGatsbyImage, StyledTitle, IconsContainer } from './styles';
 
 import profileImg from '../../images/profile_img.jpg';
 
@@ -33,17 +27,16 @@ const Intro: React.FC = () => {
 				<StyledGatsbyImage
 					src={profileImg}
 					alt="Vitor Martins profile photo"
-          width={150}
-          height={150}
+					width={150}
+					height={150}
 				/>
 				<StyledTitle>Vitor Martins</StyledTitle>
 				<Divider width={35} />
 				<Text style={{ width: '40%' }}>
-					Hey I’m Vitor! I’m a Software Engineer specialized in Web and Mobile
-					Development.
+					Hey I’m Vitor and I'm a Software Engineer.
 				</Text>
 				<Divider width={25} />
-        {/* TODO: Redesign this buttons */}
+				{/* TODO: Redesign this buttons */}
 				{/* <ButtonContainer>
 					<Button type="pill" outlined>
 						About
