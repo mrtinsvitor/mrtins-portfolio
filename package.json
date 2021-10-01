@@ -6,7 +6,9 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"test": "jest",
+		"test:watch": "jest --watch"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -23,11 +25,33 @@
 		"styled-components": "^5.3.1"
 	},
 	"devDependencies": {
+		"@babel/preset-env": "^7.15.6",
+		"@babel/preset-react": "^7.14.5",
+		"@testing-library/jest-dom": "^5.14.1",
+		"@testing-library/react": "^12.1.1",
+		"@testing-library/user-event": "^12.8.3",
+		"@types/jest": "^27.0.2",
 		"@types/react": "17.0.21",
+		"@types/react-dom": "^17.0.9",
 		"@types/styled-components": "^5.1.14",
+		"babel-jest": "^27.2.2",
 		"babel-plugin-styled-components": "^1.13.2",
 		"eslint": "7.32.0",
 		"eslint-config-next": "11.1.2",
+		"jest": "^27.2.2",
+		"react-test-renderer": "^17.0.2",
 		"typescript": "4.4.3"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
 	}
 }

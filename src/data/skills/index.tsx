@@ -1,14 +1,3 @@
-import * as javascript from 'images/skills/javascript.svg';
-import * as typescript from 'images/skills/typescript.svg';
-import * as react from 'images/skills/react.svg';
-import * as nodejs from 'images/skills/nodejs.svg';
-import * as java from 'images/skills/java.svg';
-import * as spring from 'images/skills/spring.svg';
-import * as aws from 'images/skills/aws.svg';
-import * as docker from 'images/skills/docker.svg';
-import * as sql from 'images/skills/sqlsvg.svg';
-import * as angular from 'images/skills/angular.svg';
-
 export interface ISkill {
 	name: string;
 	years: number;
@@ -25,28 +14,63 @@ const skills: ISkillList = [
 	{
 		name: 'Javascript',
 		years: 4,
-		img: javascript,
+		img: '/static/images/skills/javascript.svg',
 		url: 'https://www.javascript.com/',
 	},
 	{
 		name: 'Typescript',
 		years: 3,
-		img: typescript,
+		img: '/static/images/skills/typescript.svg',
 		url: 'https://www.typescriptlang.org/',
 	},
-	{ name: 'React', years: 4, img: react, url: 'https://pt-br.reactjs.org/' },
-	{ name: 'Angular', years: 4, img: angular, url: 'https://angular.io/' },
-	{ name: 'Node.Js', years: 4, img: nodejs, url: 'https://nodejs.org/en/' },
-	{ name: 'Java', years: 4, img: java, url: 'https://www.java.com/' },
+	{
+		name: 'React',
+		years: 4,
+		img: '/static/images/skills/react.svg',
+		url: 'https://pt-br.reactjs.org/',
+	},
+	{
+		name: 'Angular',
+		years: 4,
+		img: '/static/images/skills/angular.svg',
+		url: 'https://angular.io/',
+	},
+	{
+		name: 'Node.Js',
+		years: 4,
+		img: '/static/images/skills/nodejs.svg',
+		url: 'https://nodejs.org/en/',
+	},
+	{
+		name: 'Java',
+		years: 4,
+		img: '/static/images/skills/java.svg',
+		url: 'https://www.java.com/',
+	},
 	{
 		name: 'Spring Framework',
 		years: 4,
-		img: spring,
+		img: '/static/images/skills/spring.svg',
 		url: 'https://spring.io/',
 	},
-	{ name: 'AWS', years: 1, img: aws, url: 'https://aws.amazon.com/' },
-	{ name: 'Docker', years: 1, img: docker, url: 'https://www.docker.com/' },
-	{ name: 'SQL Databases', years: 4, img: sql, url: 'https://www.mysql.com/' },
+	{
+		name: 'AWS',
+		years: 1,
+		img: '/static/images/skills/aws.svg',
+		url: 'https://aws.amazon.com/',
+	},
+	{
+		name: 'Docker',
+		years: 1,
+		img: '/static/images/skills/docker.svg',
+		url: 'https://www.docker.com/',
+	},
+	{
+		name: 'SQL Databases',
+		years: 4,
+		img: '/static/images/skills/sql.svg',
+		url: 'https://www.mysql.com/',
+	},
 ];
 
 export default skills;

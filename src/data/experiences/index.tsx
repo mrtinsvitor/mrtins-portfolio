@@ -8,12 +8,7 @@ export interface IExperience {
 	skills: string;
 }
 
-export interface ISkillList {
-	[x: string]: any;
-	[index: number]: IExperience;
-}
-
-const experiences: ISkillList = [
+const experiences: IExperience[] = [
 	{
 		id: 1,
 		companyName: 'Nexus Consultoria (Junior Enterprise)',

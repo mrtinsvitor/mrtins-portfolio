@@ -1,10 +1,12 @@
+import About from 'components/About';
+import Contact from 'components/Contact';
+import Experience from 'components/Experience';
+import Intro from 'components/Intro';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import React from 'react';
 
-import Intro from 'components/Intro';
-import About from 'components/About';
-import Experience from 'components/Experience';
-import Contact from 'components/Contact';
+import experienceDataList from 'data/experiences';
 
 const Home: NextPage = () => {
 	return (
@@ -17,7 +19,7 @@ const Home: NextPage = () => {
 
 			<Intro />
 			<About />
-			<Experience />
+			<Experience experienceDataList={experienceDataList} />
 			<Contact />
 		</div>
 	);
