@@ -15,18 +15,18 @@ export const StyledOutlinedButton = styled.button`
   background-color: transparent;
 `;
 
-export const StyledButton = styled.button`
-  background-color: ${(props: IProps) =>
+export const StyledButton = styled.button<IProps>`
+  background-color: ${(props) =>
     props.backgroundColor ? `${props.backgroundColor}` : '#3282B8'};
-  font-family: ${(props: IProps) => (props.fontFamily ? `${props.fontFamily}` : 'Roboto')};
-  font-size: ${(props: IProps) => (props.fontSize ? `${props.fontSize}` : '.9rem')};
-  color: ${(props: IProps) => (props.color ? `${props.color}` : '#fff')};
+  font-family: ${(props) => (props.fontFamily ? `${props.fontFamily}` : 'Roboto')};
+  font-size: ${(props) => (props.fontSize ? `${props.fontSize}` : '.9rem')};
+  color: ${(props) => (props.color ? `${props.color}` : '#fff')};
   border: 0;
   margin: 5px 10px;
   padding: 5px 30px;
 
   &:hover {
-    background-color: ${(props: IProps) => (props.hoverColor ? `${props.hoverColor}` : '#007BFF')};
+    background-color: ${(props) => (props.hoverColor ? `${props.hoverColor}` : '#007BFF')};
     transition: 0.5s;
   }
 
@@ -35,7 +35,7 @@ export const StyledButton = styled.button`
   }
 
   /* Outlined buttons */
-  ${(props: IProps) =>
+  ${(props) =>
     props.outlined &&
     css`
       background-color: transparent;
