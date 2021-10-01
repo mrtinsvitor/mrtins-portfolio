@@ -7,14 +7,12 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
-import CenterComponent from '../shared/CenterComponent';
-import Divider from '../shared/Divider';
-import Text from '../shared/Text';
-import CircleIcon from '../shared/CircleIcon';
+import CenterComponent from 'components/shared/CenterComponent';
+import Divider from 'components/shared/Divider';
+import Text from 'components/shared/Text';
+import CircleIcon from 'components/shared/CircleIcon';
 
-import { StyledGatsbyImage, StyledTitle, IconsContainer } from './styles';
-
-import profileImg from '../../images/profile_img.jpg';
+import { StyledImage, StyledTitle, IconsContainer } from './styles';
 
 const Intro: React.FC = () => {
 	const openNewTab = (url: string): any => {
@@ -24,8 +22,8 @@ const Intro: React.FC = () => {
 	return (
 		<Container style={{ marginTop: '100px' }}>
 			<CenterComponent>
-				<StyledGatsbyImage
-					src={profileImg}
+				<StyledImage
+					src="/static/images/profileImg.jpg"
 					alt="Vitor Martins profile photo"
 					width={150}
 					height={150}

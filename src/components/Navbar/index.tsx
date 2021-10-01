@@ -3,8 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Navbar, Nav } from 'react-bootstrap';
 
-import devIcon from '../../images/dev-icon.svg';
-
 import { StyledNavbarLink } from './styles';
 
 interface IProps {
@@ -25,7 +23,7 @@ const CustomNavbar: React.FC<IProps> = ({ pageInfo }) => {
 					<a>
 						<Navbar.Brand as="span">
 							<Image
-								src={devIcon}
+								src="/dev-icon.svg"
 								alt="Developer icon"
 								width={32}
 								height={32}
