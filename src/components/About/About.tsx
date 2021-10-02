@@ -1,20 +1,20 @@
-import React from 'react';
+import CenterComponent from 'components/shared/CenterComponent';
+import Divider from 'components/shared/Divider';
+import Text from 'components/shared/Text';
+import Title from 'components/shared/Title';
+import { ISkill } from 'data/skills/index';
 import Image from 'next/image';
-
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
+import { StyledSkillImage, StyledSkillsContainer } from './styles';
 
-import CenterComponent from 'components/shared/CenterComponent';
-import Title from 'components/shared/Title';
-import Divider from 'components/shared/Divider';
-import Text from 'components/shared/Text';
+interface IProps {
+	skillDataList?: ISkill[];
+}
 
-import { StyledSkillsContainer, StyledSkillImage } from './styles';
-
-import skillIcons, { ISkill } from 'data/skills/index';
-
-const About: React.FC = () => {
+const About: React.FC<IProps> = ({ skillDataList }) => {
 	const openNewTab = (url: string): any => {
 		return window.open(url, '_blank');
 	};
@@ -38,28 +38,46 @@ const About: React.FC = () => {
 						check out my resume here.
 					</Text>
 				</div>
-				<div>
-					<Title style={{ fontSize: '1.6rem' }}>Some Of My Skills</Title>
-					<Divider width={25} />
-					<StyledSkillsContainer>
-						{skillIcons.map((el: ISkill, i: number) => (
-							<OverlayTrigger
-								key={i}
-								placement="bottom"
-								overlay={
-									<Tooltip id="tooltip-bottom">
-										{el.name} -{' '}
-										{el.years > 1 ? `${el.years} years` : `${el.years} year`}
-									</Tooltip>
-								}
-							>
-								<StyledSkillImage onClick={() => openNewTab(el.url)}>
-									<Image src={el.img} alt={el.name} width={42} height={42} />
-								</StyledSkillImage>
-							</OverlayTrigger>
-						))}
-					</StyledSkillsContainer>
-				</div>
+				{skillDataList && (
+					<div>
+						<Title style={{ fontSize: '1.6rem' }}>Some Of My Skills</Title>
+						<Divider width={25} />
+						<StyledSkillsContainer>
+							<ul>
+								{skillDataList.map((el: ISkill, i: number) => (
+									<li key={i}>
+										<OverlayTrigger
+											placement="bottom"
+											overlay={
+												<Tooltip
+													id="tooltip-bottom"
+													data-testid="skill-tooltip"
+												>
+													{el.name} -{' '}
+													{el.years > 1
+														? `${el.years} years`
+														: `${el.years} year`}
+												</Tooltip>
+											}
+										>
+											<StyledSkillImage
+												data-testid="skill-overlay"
+												onClick={() => openNewTab(el.url)}
+											>
+												<Image
+													src={el.img}
+													alt={el.name}
+													width={42}
+													height={42}
+												/>
+											</StyledSkillImage>
+										</OverlayTrigger>
+									</li>
+								))}
+							</ul>
+						</StyledSkillsContainer>
+					</div>
+				)}
 			</CenterComponent>
 		</Container>
 	);

@@ -5,12 +5,7 @@ export interface ISkill {
 	url: string;
 }
 
-export interface ISkillList {
-	[x: string]: any;
-	[index: number]: ISkill;
-}
-
-const skills: ISkillList = [
+const skills: ISkill[] = [
 	{
 		name: 'Javascript',
 		years: 4,
