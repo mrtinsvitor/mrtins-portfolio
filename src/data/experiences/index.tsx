@@ -36,7 +36,7 @@ const experiences: IExperience[] = [
 		description:
 			'Acting as a Full-Stack Web Developer outsourcing projects Brazilian companies such as Oi (Telecom) and Estácio (University), both one of the biggest companies in telecom and education in Brazil. As an outsourcing company I could develop several web development skills such as working with microservices projects, cloud architectures like AWS and also React and Node.Js with Typescript.',
 		skills:
-			'Java, Spring Framework, React, Node.Js, Typescript, AWS, Docker, RabbitMQ, MongoDB and Oracle Database',
+			'Java, Spring Framework, React, Node.Js, Typescript, AWS, Docker, RabbitMQ, Redis, MongoDB and Oracle Database',
 	},
 	{
 		id: 4,
