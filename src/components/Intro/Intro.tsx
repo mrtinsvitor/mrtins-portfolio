@@ -1,9 +1,3 @@
-import {
-	faGithub,
-	faLinkedinIn,
-	faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import CenterComponent from 'components/shared/CenterComponent';
 import CircleIcon from 'components/shared/CircleIcon';
 import Divider from 'components/shared/Divider';
@@ -33,14 +27,11 @@ const Intro: React.FC<IProps> = ({ socialDataList }) => {
 						height={150}
 					/>
 					<StyledTitle>Vitor Martins</StyledTitle>
-					<Text style={{ width: '40%' }}>
-						Software Developer
-					</Text>
+					<Text style={{ width: '40%' }}>Software Developer</Text>
 					<Divider width={35} />
 				</>
 				{socialDataList && (
 					<>
-						{/* <Divider width={25} /> */}
 						<IconsContainer>
 							{socialDataList.map((social, i) => (
 								<li key={i}>

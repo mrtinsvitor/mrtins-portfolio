@@ -1,8 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import { Navbar, Nav } from 'react-bootstrap';
-
+import Link from 'next/link';
+import React from 'react';
+import { Nav, Navbar } from 'react-bootstrap';
 import { StyledNavbarLink } from './styles';
 
 interface IProps {

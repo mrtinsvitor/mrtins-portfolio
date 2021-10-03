@@ -4,9 +4,9 @@ import { ISocial } from 'data/socials';
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import {
-	IconsContainer,
-	StyledContactsContainer,
-	StyledContactText,
+  IconsContainer,
+  StyledContactsContainer,
+  StyledContactText
 } from './styles';
 
 interface IProps {

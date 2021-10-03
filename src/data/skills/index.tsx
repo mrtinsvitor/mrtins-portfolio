@@ -29,8 +29,8 @@ const skills: ISkill[] = [
 		years: 4,
 		img: '/static/images/skills/angular.svg',
 		url: 'https://angular.io/',
-	},	
-  {
+	},
+	{
 		name: 'Ionic',
 		years: 4,
 		img: '/static/images/skills/ionic.svg',

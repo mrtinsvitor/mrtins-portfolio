@@ -1,4 +1,3 @@
-// import { ISkillList } from './types';
 export interface IExperience {
 	id: number;
 	companyName: string;
