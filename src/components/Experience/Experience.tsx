@@ -7,11 +7,11 @@ import CenterComponent from '../shared/CenterComponent';
 import Divider from '../shared/Divider';
 import Title from '../shared/Title';
 import {
-  StyledCompanyInfo,
-  StyledCompanyName,
-  StyledExperienceDescription,
-  StyledExperienceSkills,
-  StyledVerticalDivider
+	StyledCompanyInfo,
+	StyledCompanyName,
+	StyledExperienceDescription,
+	StyledExperienceSkills,
+	StyledVerticalDivider,
 } from './styles';
 
 interface IProps {
@@ -22,7 +22,7 @@ const Experience: React.FC<IProps> = ({ experienceDataList }) => {
 	return (
 		<>
 			{experienceDataList && (
-				<Container style={{ marginTop: '120px' }}>
+				<Container id="experience" style={{ marginTop: '120px' }}>
 					<CenterComponent>
 						<div style={{ marginBottom: '40px' }}>
 							<Title>Career Experience</Title>

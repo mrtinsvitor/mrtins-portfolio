@@ -23,22 +23,24 @@ const Intro: React.FC<IProps> = ({ socialDataList }) => {
 	};
 
 	return (
-		<Container style={{ marginTop: '100px' }}>
+		<Container style={{ marginTop: '0' }}>
 			<CenterComponent>
-				<StyledImage
-					src="/static/images/profileImg.jpg"
-					alt="Vitor Martins profile photo"
-					width={150}
-					height={150}
-				/>
-				<StyledTitle>Vitor Martins</StyledTitle>
-				<Divider width={35} />
-				<Text style={{ width: '40%' }}>
-					Hey I’m Vitor and I'm a Software Engineer.
-				</Text>
+				<>
+					<StyledImage
+						src="/static/images/profileImg.jpg"
+						alt="Vitor Martins profile photo"
+						width={150}
+						height={150}
+					/>
+					<StyledTitle>Vitor Martins</StyledTitle>
+					<Text style={{ width: '40%' }}>
+						Software Developer
+					</Text>
+					<Divider width={35} />
+				</>
 				{socialDataList && (
 					<>
-						<Divider width={25} />
+						{/* <Divider width={25} /> */}
 						<IconsContainer>
 							{socialDataList.map((social, i) => (
 								<li key={i}>

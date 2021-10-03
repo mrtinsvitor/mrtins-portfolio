@@ -1,10 +1,7 @@
 import React, { ReactNode } from 'react';
-
-import { Container, Row, Col } from 'react-bootstrap';
-
-import { StyledFooter, StyledCopyright } from './styles';
-
+import { Container } from 'react-bootstrap';
 import Navbar from '../Navbar';
+import { StyledCopyright, StyledFooter } from './styles';
 
 interface IProps {
 	children: ReactNode;

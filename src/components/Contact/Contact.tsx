@@ -1,21 +1,13 @@
-import React from 'react';
-import { Container } from 'react-bootstrap';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import {
-	faLinkedinIn,
-	faTwitter,
-	faGithub,
-} from '@fortawesome/free-brands-svg-icons';
-
 import CenterComponent from 'components/shared/CenterComponent';
 import CircleIcon from 'components/shared/CircleIcon/index';
-
+import { ISocial } from 'data/socials';
+import React from 'react';
+import { Container } from 'react-bootstrap';
 import {
-	StyledContactText,
 	IconsContainer,
 	StyledContactsContainer,
+	StyledContactText,
 } from './styles';
-import { ISocial } from 'data/socials';
 
 interface IProps {
 	socialDataList?: ISocial[];
@@ -29,7 +21,7 @@ const Contact: React.FC<IProps> = ({ socialDataList }) => {
 	return (
 		<>
 			{socialDataList && (
-				<Container style={{ marginTop: '100px' }}>
+				<Container id="contact" style={{ marginTop: '100px' }}>
 					<CenterComponent style={{ marginTop: '30px', marginBottom: '40px' }}>
 						<StyledContactsContainer>
 							<StyledContactText>Get in contact</StyledContactText>

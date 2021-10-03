@@ -16,7 +16,6 @@ const CustomNavbar: React.FC<IProps> = ({ pageInfo }) => {
 				variant="dark"
 				expand="md"
 				id="site-navbar"
-				fixed="top"
 				style={styles.navbarBorder}
 			>
 				<Link href="/">
@@ -34,19 +33,14 @@ const CustomNavbar: React.FC<IProps> = ({ pageInfo }) => {
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
 					<Nav className="ml-auto" activeKey={pageInfo && pageInfo.pageName}>
-						<StyledNavbarLink href="#home">
-							<Nav.Link as="span" className="navbar-link">
-								Home
-							</Nav.Link>
-						</StyledNavbarLink>
 						<StyledNavbarLink href="#about">
 							<Nav.Link as="span" className="navbar-link">
 								About
 							</Nav.Link>
 						</StyledNavbarLink>
-						<StyledNavbarLink href="#projects">
+						<StyledNavbarLink href="#experience">
 							<Nav.Link as="span" className="navbar-link">
-								Projects
+								Experience
 							</Nav.Link>
 						</StyledNavbarLink>
 						<StyledNavbarLink href="#contact">

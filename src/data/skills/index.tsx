@@ -29,12 +29,24 @@ const skills: ISkill[] = [
 		years: 4,
 		img: '/static/images/skills/angular.svg',
 		url: 'https://angular.io/',
+	},	
+  {
+		name: 'Ionic',
+		years: 4,
+		img: '/static/images/skills/ionic.svg',
+		url: 'https://ionicframework.com/',
 	},
 	{
 		name: 'Node.Js',
 		years: 4,
 		img: '/static/images/skills/nodejs.svg',
 		url: 'https://nodejs.org/en/',
+	},
+	{
+		name: 'Jest',
+		years: 1,
+		img: '/static/images/skills/jest.svg',
+		url: 'https://jestjs.io/',
 	},
 	{
 		name: 'Java',
@@ -54,12 +66,12 @@ const skills: ISkill[] = [
 		img: '/static/images/skills/aws.svg',
 		url: 'https://aws.amazon.com/',
 	},
-	{
-		name: 'Docker',
-		years: 1,
-		img: '/static/images/skills/docker.svg',
-		url: 'https://www.docker.com/',
-	},
+	// {
+	// 	name: 'Docker',
+	// 	years: 1,
+	// 	img: '/static/images/skills/docker.svg',
+	// 	url: 'https://www.docker.com/',
+	// },
 	{
 		name: 'SQL Databases',
 		years: 4,

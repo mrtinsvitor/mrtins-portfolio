@@ -47,7 +47,7 @@ const experiences: IExperience[] = [
 		description:
 			'With Aubay I could get myself to work on a different country than my native one, which is giving me a wonderful experience, since I can get to know new cultures and different people around the world. In Aubay I work as a Software Development Engineer in outsource projects for big European companies. Working with Full stack projects, I could get in touch in the Front End with the most popular technologies like React, Ionic and Angular for PWAs projects. For the Back End I could work with Node.Js and Java with Spring Framework and could also learn Kotlin for Back End',
 		skills:
-			'Java, Spring Framework, React, Node.Js, Typescript, Kotlin, MongoDB',
+			'Java, Spring Framework, React, Angular, Ionic, Node.Js, Typescript, Kotlin, MongoDB, PWAs',
 	},
 ];
 
