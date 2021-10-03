@@ -2,11 +2,12 @@ import About from 'components/About';
 import Contact from 'components/Contact';
 import Experience from 'components/Experience';
 import Intro from 'components/Intro';
+import experienceDataList from 'data/experiences';
+import skillDataList from 'data/skills';
+import socialDataList from 'data/socials';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
-
-import experienceDataList from 'data/experiences';
 
 const Home: NextPage = () => {
 	return (
@@ -17,10 +18,10 @@ const Home: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<Intro />
-			<About />
+			<Intro socialDataList={socialDataList} />
+			<About skillDataList={skillDataList} />
 			<Experience experienceDataList={experienceDataList} />
-			<Contact />
+			<Contact socialDataList={socialDataList} />
 		</div>
 	);
 };

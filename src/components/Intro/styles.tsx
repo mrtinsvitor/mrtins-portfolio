@@ -21,7 +21,7 @@ export const ButtonContainer = styled.div`
   margin-bottom: 20px;
 `;
 
-export const IconsContainer = styled.div`
+export const IconsContainer = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;

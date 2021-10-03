@@ -15,48 +15,40 @@ import {
 	IconsContainer,
 	StyledContactsContainer,
 } from './styles';
+import { ISocial } from 'data/socials';
 
-const Contact: React.FC = () => {
+interface IProps {
+	socialDataList?: ISocial[];
+}
+
+const Contact: React.FC<IProps> = ({ socialDataList }) => {
 	const openNewTab = (url: string): any => {
 		return window.open(url, '_blank');
 	};
 
 	return (
-		<Container style={{ marginTop: '100px' }}>
-			<CenterComponent style={{ marginTop: '30px', marginBottom: '40px' }}>
-				<StyledContactsContainer>
-					<StyledContactText>Get in contact</StyledContactText>
-					<IconsContainer>
-						<CircleIcon
-							onClick={() =>
-								openNewTab('https://www.linkedin.com/in/martinsvitor/')
-							}
-							icon={faLinkedinIn}
-							color="#fff"
-							containerStyle={{ width: '36px', height: '36px' }}
-						/>
-						<CircleIcon
-							onClick={() => openNewTab('https://github.com/mrtins')}
-							icon={faGithub}
-							color="#fff"
-							containerStyle={{ width: '36px', height: '36px' }}
-						/>
-						<CircleIcon
-							onClick={() => openNewTab('https://twitter.com/mrtinsvitor')}
-							icon={faTwitter}
-							color="#fff"
-							containerStyle={{ width: '36px', height: '36px' }}
-						/>
-						<CircleIcon
-							onClick={() => openNewTab('mailto:vitorfigmartins@gmail.com')}
-							icon={faEnvelope}
-							color="#fff"
-							containerStyle={{ width: '36px', height: '36px' }}
-						/>
-					</IconsContainer>
-				</StyledContactsContainer>
-			</CenterComponent>
-		</Container>
+		<>
+			{socialDataList && (
+				<Container style={{ marginTop: '100px' }}>
+					<CenterComponent style={{ marginTop: '30px', marginBottom: '40px' }}>
+						<StyledContactsContainer>
+							<StyledContactText>Get in contact</StyledContactText>
+							<IconsContainer>
+								{socialDataList.map((social, i) => (
+									<li key={i}>
+										<CircleIcon
+											onClick={() => openNewTab(social.url)}
+											icon={social.icon}
+											color="#fff"
+										/>
+									</li>
+								))}
+							</IconsContainer>
+						</StyledContactsContainer>
+					</CenterComponent>
+				</Container>
+			)}
+		</>
 	);
 };
 

@@ -1,20 +1,23 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
 import {
+	faGithub,
 	faLinkedinIn,
 	faTwitter,
-	faGithub,
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-
 import CenterComponent from 'components/shared/CenterComponent';
+import CircleIcon from 'components/shared/CircleIcon';
 import Divider from 'components/shared/Divider';
 import Text from 'components/shared/Text';
-import CircleIcon from 'components/shared/CircleIcon';
+import { ISocial } from 'data/socials';
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import { IconsContainer, StyledImage, StyledTitle } from './styles';
 
-import { StyledImage, StyledTitle, IconsContainer } from './styles';
+interface IProps {
+	socialDataList?: ISocial[];
+}
 
-const Intro: React.FC = () => {
+const Intro: React.FC<IProps> = ({ socialDataList }) => {
 	const openNewTab = (url: string): any => {
 		return window.open(url, '_blank');
 	};
@@ -33,43 +36,22 @@ const Intro: React.FC = () => {
 				<Text style={{ width: '40%' }}>
 					Hey I’m Vitor and I'm a Software Engineer.
 				</Text>
-				<Divider width={25} />
-				{/* TODO: Redesign this buttons */}
-				{/* <ButtonContainer>
-					<Button type="pill" outlined>
-						About
-					</Button>
-					<Button type="pill" outlined>
-						Projects
-					</Button>
-					<Button type="pill" outlined>
-						Contact
-					</Button>
-				</ButtonContainer> */}
-				<IconsContainer>
-					<CircleIcon
-						onClick={() =>
-							openNewTab('https://www.linkedin.com/in/martinsvitor/')
-						}
-						icon={faLinkedinIn}
-						color="#fff"
-					/>
-					<CircleIcon
-						onClick={() => openNewTab('https://github.com/mrtins')}
-						icon={faGithub}
-						color="#fff"
-					/>
-					<CircleIcon
-						onClick={() => openNewTab('https://twitter.com/mrtinsvitor')}
-						icon={faTwitter}
-						color="#fff"
-					/>
-					<CircleIcon
-						onClick={() => openNewTab('mailto:vitorfigmartins@gmail.com')}
-						icon={faEnvelope}
-						color="#fff"
-					/>
-				</IconsContainer>
+				{socialDataList && (
+					<>
+						<Divider width={25} />
+						<IconsContainer>
+							{socialDataList.map((social, i) => (
+								<li key={i}>
+									<CircleIcon
+										onClick={() => openNewTab(social.url)}
+										icon={social.icon}
+										color="#fff"
+									/>
+								</li>
+							))}
+						</IconsContainer>
+					</>
+				)}
 			</CenterComponent>
 		</Container>
 	);
