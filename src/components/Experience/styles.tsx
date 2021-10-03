@@ -18,7 +18,7 @@ export const StyledCompanyInfo = styled.span`
 `;
 
 export const StyledExperienceDescription = styled.p`
-  font-size: 1rem;
+  font-size: .95rem;
   font-family: 'Roboto';
   font-weight: 400;
   color: #fff;
