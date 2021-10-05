@@ -28,9 +28,9 @@ const About: React.FC<IProps> = ({ skillDataList }) => {
 					<Title>About Me</Title>
 					<Divider width={20} />
 					<Text style={{ textAlign: 'justify' }}>
-						Hey I'm Vitor, and I build things. I'm experienced in Fullstack Web
+						Hey I&apos;m Vitor, and I build things. I&apos;m experienced in Fullstack Web
 						Development but I also like developing mobile applications
-						(hybrid/native). There are some technologies that I'm used to
+						(hybrid/native). There are some technologies that I&apos;m used to
 						working on a daily basis such as JavaScript and frameworks like
 						React.Js, Angular, Node.Js, and also have good experience with Java
 						and the Spring Framework. And as a Fullstack developer I also got

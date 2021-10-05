@@ -20,7 +20,7 @@ const CircleIcon: React.FC<IProps> = ({
 	onClick,
 	hover = true,
 }) => (
-	<StyledCircle containerStyle={containerStyle} onClick={onClick} hover={hover}>
+	<StyledCircle style={containerStyle} onClick={onClick} hover={hover}>
 		<FontAwesomeIcon icon={icon} style={iconStyle} color={color} />
 	</StyledCircle>
 );

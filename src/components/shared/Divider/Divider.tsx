@@ -5,6 +5,7 @@ interface IProps {
 	width?: number;
 	height?: number;
 	vertical?: boolean;
+  style?: Record<string, unknown>;
 }
 
 const Divider: React.FC<IProps> = ({ vertical, ...props }) =>
