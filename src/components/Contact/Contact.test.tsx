@@ -19,7 +19,10 @@ describe('ContactComponent', () => {
 		];
 
 		render(<Contact socialDataList={mockData} />);
+		const socialUrl = screen.getAllByRole('link')[0];
 
 		expect(screen.getAllByRole('listitem').length).toBe(mockData.length);
+		expect(socialUrl).toHaveAttribute('href', mockData[0].url);
+		expect(socialUrl).toHaveAttribute('target', '_blank');
 	});
 });

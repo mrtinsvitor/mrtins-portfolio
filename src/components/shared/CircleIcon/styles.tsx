@@ -4,7 +4,7 @@ interface IProps {
 	hover?: boolean;
 }
 
-export const StyledCircle = styled.span<IProps>`
+export const StyledCircle = styled.a<IProps>`
 	border-radius: 50%;
 	width: 40px;
 	height: 40px;

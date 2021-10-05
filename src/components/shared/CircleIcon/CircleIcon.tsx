@@ -9,7 +9,8 @@ interface IProps {
 	color?: string;
 	hover?: boolean;
 	children?: React.ReactNode;
-	onClick?: any;
+	href: string;
+	target?: string;
 }
 
 const CircleIcon: React.FC<IProps> = ({
@@ -17,10 +18,16 @@ const CircleIcon: React.FC<IProps> = ({
 	iconStyle,
 	containerStyle,
 	color,
-	onClick,
 	hover = true,
+	href,
+	target,
 }) => (
-	<StyledCircle style={containerStyle} onClick={onClick} hover={hover}>
+	<StyledCircle
+		href={href}
+		target={target}
+		style={containerStyle}
+		hover={hover}
+	>
 		<FontAwesomeIcon icon={icon} style={iconStyle} color={color} />
 	</StyledCircle>
 );

@@ -17,10 +17,6 @@ interface IProps {
 }
 
 const About: React.FC<IProps> = ({ skillDataList }) => {
-	const openNewTab = (url: string): any => {
-		return window.open(url, '_blank');
-	};
-
 	return (
 		<Container id="about" style={{ marginTop: '60px' }}>
 			<CenterComponent>
@@ -28,14 +24,14 @@ const About: React.FC<IProps> = ({ skillDataList }) => {
 					<Title>About Me</Title>
 					<Divider width={20} />
 					<Text style={{ textAlign: 'justify' }}>
-						Hey I&apos;m Vitor, and I build things. I&apos;m experienced in Fullstack Web
-						Development but I also like developing mobile applications
-						(hybrid/native). There are some technologies that I&apos;m used to
-						working on a daily basis such as JavaScript and frameworks like
-						React.Js, Angular, Node.Js, and also have good experience with Java
-						and the Spring Framework. And as a Fullstack developer I also got
-						some experiences with SQL and NoSQL databases, AWS Services and
-						Docker.
+						Hey I&apos;m Vitor, and I build things. I&apos;m experienced in
+						Fullstack Web Development but I also like developing mobile
+						applications (hybrid/native). There are some technologies that
+						I&apos;m used to working on a daily basis such as JavaScript and
+						frameworks like React.Js, Angular, Node.Js, and also have good
+						experience with Java and the Spring Framework. And as a Fullstack
+						developer I also got some experiences with SQL and NoSQL databases,
+						AWS Services and Docker.
 					</Text>
 				</div>
 				{skillDataList && (
@@ -64,7 +60,8 @@ const About: React.FC<IProps> = ({ skillDataList }) => {
 												<StyledSkillImage
 													aria-label={`${el.years} year experience in ${el.name}`}
 													data-testid="skill-overlay"
-													onClick={() => openNewTab(el.url)}
+													href={el.url}
+													target="_blank"
 												>
 													<Image
 														src={el.img}

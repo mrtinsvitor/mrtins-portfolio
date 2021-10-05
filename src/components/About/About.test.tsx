@@ -1,11 +1,5 @@
 import '@testing-library/jest-dom';
-import {
-	fireEvent,
-	queryByAttribute,
-	render,
-	screen,
-	waitFor,
-} from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { ISkill } from 'data/skills';
 import About from '.';
 
@@ -29,11 +23,14 @@ describe('AboutComponent', () => {
 		fireEvent.mouseOver(screen.getByTestId('skill-overlay'));
 		const skillYears = await waitFor(() => screen.getByTestId('skill-tooltip'));
 		const image = screen.getByRole('img');
+		const skillUrl = screen.getAllByRole('link')[0];
 
 		expect(skillYears.textContent).toBe(
 			`${mockData[0].name} - ${mockData[0].years.toString()} years`
 		);
 		expect(screen.getAllByRole('listitem').length).toBe(mockData.length);
 		expect(image).toHaveAttribute('alt', mockData[0].name);
+		expect(skillUrl).toHaveAttribute('href', mockData[0].url);
+		expect(skillUrl).toHaveAttribute('target', '_blank');
 	});
 });

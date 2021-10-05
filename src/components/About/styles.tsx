@@ -7,7 +7,7 @@ export const StyledSkillsContainer = styled.ul`
 	margin-top: 20px;
 `;
 
-export const StyledSkillImage = styled.div`
+export const StyledSkillImage = styled.a`
 	margin: 0 15px;
 
 	&:hover {

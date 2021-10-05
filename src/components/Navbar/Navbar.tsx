@@ -21,7 +21,7 @@ const CustomNavbar: React.FC<IProps> = ({ pageInfo }) => {
 					<a>
 						<Navbar.Brand as="span">
 							<Image
-								src="/dev-icon.svg"
+								src="/static/images/dev-icon.svg"
 								alt="Developer icon"
 								width={32}
 								height={32}
