@@ -25,8 +25,8 @@ const Home: NextPage = () => {
 						some experiences with SQL and NoSQL databases, AWS Services and
 						Docker."
 				/>
-				<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-				<link rel="icon" href="/favicon.ico" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<link rel="icon" href="/static/images/dev-icon.svg" />
 			</Head>
 
 			<Intro socialDataList={socialDataList} />
