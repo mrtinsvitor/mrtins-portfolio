@@ -56,8 +56,7 @@ const CustomNavbar: React.FC<IProps> = ({ pageInfo }) => {
 
 const styles = {
 	navbarBorder: {
-		// borderBottom: '1px solid #3282B8',
-		backgroundColor: '#222831',
+		// backgroundColor: '#222831',
 		padding: '.5rem 1rem',
 	},
 };
