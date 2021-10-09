@@ -30,7 +30,7 @@ const socials: ISocial[] = [
 	},
 	{
 		id: 4,
-		url: 'mailto:vitorfigmartins@gmail.com',
+		url: 'mailto:mrtinsdev@gmail.com',
 		icon: faEnvelope,
 	},
 ];
