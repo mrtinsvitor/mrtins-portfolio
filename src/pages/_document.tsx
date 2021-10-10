@@ -7,12 +7,10 @@ import Document, {
 	NextScript,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import { GA_TRACKING_ID } from '../../lib/gtag';
 
 class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
-		// const initialProps = await Document.getInitialProps(ctx);
-		// return { ...initialProps };
-
 		const sheet = new ServerStyleSheet();
 		const originalRenderPage = ctx.renderPage;
 
@@ -48,7 +46,7 @@ class MyDocument extends Document {
 					/>
 					<script
 						async
-						src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+						src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
 					/>
 					<script
 						dangerouslySetInnerHTML={{
@@ -56,7 +54,7 @@ class MyDocument extends Document {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+            gtag('config', '${GA_TRACKING_ID}', {
               page_path: window.location.pathname,
             });
           `,
